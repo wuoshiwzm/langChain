@@ -23,7 +23,7 @@ pip install ollama
 
 1. 安装 LangGraph CLI
 ```
-pip install --upgrade "langgraph-cli[inmem]
+pip install --upgrade "langgraph-cli[inmem]"
 ```
 
 2. 配置 LangSmith 的环境变量
@@ -60,4 +60,18 @@ pip install --upgrade "langgraph-cli[inmem]
 
 5. 安装依赖项
 在 LangGraph 应用的根目录 安装依赖
+```
+pip install -e .
+```
 
+6. 在 studio 中查看代理
+
+根目录执行
+```
+langgraph dev
+```
+- 🚀 API: http://127.0.0.1:2024
+- 🎨 Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
+- 📚 API Docs: http://127.0.0.1:2024/docs
+
+> 开始疯狂报错 AttributeError: module 'huggingface_hub' has no attribute 'hf_api' xxx， 后来尝试了各种方法，安装卸载 langchain, langgraph, 最还删除了包 huggingface_hub 才正常运行

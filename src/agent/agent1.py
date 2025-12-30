@@ -1,20 +1,12 @@
 from langchain.agents import create_agent
+from agent.llm import llm_ollama
+from agent.tools.weather import send_mail, get_weather, web_search
 
-from llm import llm
+tools = [send_mail, get_weather, web_search]
 
-def send_mail(to:str, subject:str, body:str):
-    email={
-        'to':to,
-        'subject':subject,
-        'body':body
-    }
-    # todo send email ...
-    return f'email sent to {to}'
-
-
-create_agent(
-    model=llm,
-    tools=[send_mail],
-    system_prompt='you are a agent, use send_email tools always'
+agent = create_agent(
+    model=llm_ollama,
+    tools=tools,
+    system_prompt='you are a agent, use send_email tools always',
 )
 
