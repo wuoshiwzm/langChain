@@ -1,6 +1,6 @@
 from langchain.agents import create_agent
 
-from agent.llm import zhipuai_llm
+from llm import zhipuai_llm
 from agent.tools.tool_demo0 import web_search
 
 agent = create_agent(

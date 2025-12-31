@@ -1,6 +1,6 @@
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
-from agent.llm import zhipuai_llm
+from llm import zhipuai_llm
 
 
 # ? 注释方法1：写在函数体内

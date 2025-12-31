@@ -1,5 +1,5 @@
 from langchain.agents import create_agent
-from agent.llm import llm_ollama
+from llm import llm_ollama
 from agent.tools.weather import send_mail, get_weather, web_search
 
 tools = [send_mail, get_weather, web_search]
