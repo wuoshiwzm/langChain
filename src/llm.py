@@ -19,7 +19,6 @@ llm_ollama = ChatOllama(
 # response = llm_ollama.invoke(messages)
 # print(response)
 
-
 print(f"open ai api key:::::{OPENAI_API_KEY}")
 
 #? 2. openai 模型
