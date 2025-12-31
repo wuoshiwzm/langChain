@@ -75,3 +75,13 @@ langgraph dev
 - 📚 API Docs: http://127.0.0.1:2024/docs
 
 > 开始疯狂报错 AttributeError: module 'huggingface_hub' has no attribute 'hf_api' xxx， 后来尝试了各种方法，安装卸载 langchain, langgraph, 最还删除了包 huggingface_hub 才正常运行
+
+
+
+装包：
+```shell
+pip install pyjwt
+
+
+
+```
