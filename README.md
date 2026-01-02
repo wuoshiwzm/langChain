@@ -10,7 +10,14 @@
 
 
 #### 本地部署大模型
+
+```
+pip install langchain langgraph langchain-openai langchain-deepseek 
+pip install dotenv
 pip install ollama
+pip install zhipuai
+```
+
 
 
 
@@ -84,4 +91,12 @@ pip install pyjwt
 
 
 
+```
+
+
+# SQL Agent 项目
+
+### 依赖库
+```angular2html
+pip install sqlalchemy pymysql loguru
 ```

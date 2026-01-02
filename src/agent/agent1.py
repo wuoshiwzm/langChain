@@ -1,12 +1,15 @@
 from langchain.agents import create_agent
 
-from llm import zhipuai_llm
-from agent.tools.tool_demo0 import web_search
+from agent.llm import llm_openai
+from agent.tools.tool_demo1 import MyWebSearchTool
+from agent.tools.weather import send_mail, get_weather, web_search
 
-agent = create_agent(
-    zhipuai_llm,
-    tools=[web_search],
-    system_prompt="you are agent, do something..."
+# 创建一个自定义的工具
+mywebsearch = MyWebSearchTool()
+
+agent1 = create_agent(
+    model=llm_openai,
+    tools=[mywebsearch],
+    system_prompt='you are a agent, use websearch tools always',
 )
-
 

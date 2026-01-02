@@ -2,7 +2,7 @@ from langchain_core.tools import tool
 
 
 # 3. 定义工具
-@tool("Send an email to the specified recipient")
+@tool("send_mail")
 def send_mail(to: str, subject: str, body: str):
     """
     Send an email to the specified recipient.
@@ -19,7 +19,7 @@ def send_mail(to: str, subject: str, body: str):
     return f"✅ Email sent successfully to {to}"
 
 
-@tool("Get current weather for a city")
+@tool("get_weather")
 def get_weather(city: str):
     """
     Get current weather for the specified city.
@@ -38,7 +38,7 @@ def get_weather(city: str):
     return f"🌤️ Weather in {city}: {condition}, {temp}°C"
 
 
-@tool("Search the web for information")
+@tool("web_search")
 def web_search(query: str):
     """
     Search the web for the specified query.
@@ -48,14 +48,3 @@ def web_search(query: str):
     """
     # 模拟网络搜索
     return f"🔍 Search results for '{query}': This is simulated search result. In a real implementation, this would connect to a search API."
-
-@tool("sending email")
-def send_mail(to:str, subject:str, body:str):
-    """发送邮件"""
-    email={
-        'to':to,
-        'subject':subject,
-        'body':body
-    }
-    # todo send email ...
-    return f'email sent to {to}'
