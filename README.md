@@ -100,3 +100,45 @@ pip install pyjwt
 ```angular2html
 pip install sqlalchemy pymysql loguru
 ```
+
+# 2. 工具开发
+
+## 2.0 工具创建的方式
+
+所有工具都继承 langchain_core.tools.BaseTool
+
+## 2.1 XXX 工具
+
+
+## 2.2 XXX 工具
+
+
+## 2.3 XXX 工具
+
+
+## 2.4 XXX 工具
+
+## 2.5 要点
+
+运行命令
+```
+langgraph dev --allow-blocking 允许阻塞 （同步调用， 否则 langgraph 默认采用导步调用）
+```
+
+大模型传参时，尽量不要使用太复杂的数据类型
+比如将 Optional[List[str]] = None 改为 Optional[str] = None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
